@@ -3,9 +3,15 @@ require_relative 'lib/cheer'
 
 #this file is for IO and delegates logic to our tested classes in lib
 
-puts "Hello, What is your name?"
-name = gets
+puts "Hello, what is your name?"
+name = gets.chomp
+
+until Cheer.valid_name?(name)
+    puts "I'm sorry, what was your name again?"
+    name = gets.chomp
+end
+
 puts Cheer.for_person(name)
-# puts "Hey #{name}, what's your birthday (mm/dd)?"
-# birthday_string = gets
-# puts Cheer.for_birthday(birthday_string)
+puts "Hey #{name}, what's your birthday?(mm/dd)"
+birthday_string = gets
+puts Cheer.for_birthday(birthday_string)

@@ -26,9 +26,9 @@ class TestCheersIntegration < MiniTest::Test
         IO.popen('./cheers','r+') do |pipe|
             expected << "Hello, what is your name?\n"
             pipe.puts ""
-            expected << "I'm sorry, what was your name again?"
+            expected << "I'm sorry, what was your name again?\n"
             pipe.puts ""
-            expected << "I'm sorry, what was your name again?"
+            expected << "I'm sorry, what was your name again?\n"
             pipe.puts "Ed"
             expected << "Give me an.. E!\n"
             expected << "Give me a... D!\n"

@@ -1,4 +1,11 @@
 #!/usr/bin/env ruby
-require 'date'
+require_relative 'lib/cheer'
 
-puts '1'
+#this file is for IO and delegates logic to our tested classes in lib
+
+puts "Hello, What is your name?"
+name = gets
+puts Cheer.for_person(name)
+# puts "Hey #{name}, what's your birthday (mm/dd)?"
+# birthday_string = gets
+# puts Cheer.for_birthday(birthday_string)
